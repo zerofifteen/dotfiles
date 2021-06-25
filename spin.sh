@@ -1,0 +1,1 @@
+alias refresh='stop && git pull && update && start'
