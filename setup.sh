@@ -23,7 +23,3 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # Reload zsh config
 source ~/.zshrc
-
-if [ $SPIN ]; then
-  source ~/dotfiles/spin.sh
-fi
