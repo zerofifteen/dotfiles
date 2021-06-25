@@ -20,21 +20,3 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-function branch() {
-  git add .
-  if [ "$1" != "" ]
-  then
-      git commit -m "$1"
-  else
-      git commit -m update # default commit message is `update`
-  fi # closing statement of if-else block
-  git push origin HEAD
-}
-
-
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-if [ -e /Users/michael/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/michael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
